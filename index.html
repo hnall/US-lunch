@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lunch Menu</title>
+  <title>San Mateo Lunch Menu</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -37,8 +37,13 @@
       line-height: 1.3;
     }
 
-    .column { width: 45%; }
-    h3 { margin: 18px 0 8px 0; }
+    .column {
+      width: 45%;
+    }
+
+    h3 {
+      margin: 18px 0 8px 0;
+    }
 
     .omnivore { color: #000; font-weight: bold; }
     .vegetarian { color: green; font-weight: bold; }
@@ -56,79 +61,89 @@
   </style>
 </head>
 <body>
-  <div class="content">
-    <header id="menu-date">Loading menu...</header>
+  <div class="content" id="menuContent">
+    <header id="menuHeader">Loading menu...</header>
     <div class="menu" id="menu"></div>
   </div>
-
   <footer>Menu display is based on the web PDF and is subject to change.</footer>
 
   <script>
-    const menuUrl = 'https://YOUR_GITHUB_PATH/sm_menu.json'; // ← replace with your GitHub raw URL
+    const menuUrl = 'https://raw.githubusercontent.com/hnall/US-lunch/main/sm_menu.json';
     const fallbackImage = 'https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1759264059/nuevaschoolorg/xsbsbt1z8yeiuvpcoemz/US_REDIRECT_IMG.jpg';
 
-    // get local date in Pacific Time
-    const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
-    const hour = now.getHours();
+    async function loadMenu() {
+      try {
+        const res = await fetch(menuUrl, { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
 
-    // show today's menu between 5am–1pm, tomorrow's after 1pm
-    const targetDate = new Date(now);
-    if (hour >= 13 && hour < 24) targetDate.setDate(targetDate.getDate() + 1);
-    const dateKey = targetDate.toISOString().split("T")[0];
+        const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+        const hour = now.getHours();
 
-    fetch(menuUrl)
-      .then(res => res.json())
-      .then(data => {
-        const todayMenu = data[dateKey];
-        if (!todayMenu) {
+        // 5am–1pm = today, 1pm–11pm = tomorrow
+        const targetDate = new Date(now);
+        if (hour >= 13 && hour < 24) targetDate.setDate(targetDate.getDate() + 1);
+        const dateKey = targetDate.toISOString().split('T')[0];
+        const menuData = data[dateKey];
+
+        if (!menuData) {
+          console.warn('No menu found for', dateKey);
           window.location.href = fallbackImage;
           return;
         }
 
-        const menuDiv = document.getElementById('menu');
-        const header = document.getElementById('menu-date');
+        const header = document.getElementById('menuHeader');
+        const menuContainer = document.getElementById('menu');
+        menuContainer.innerHTML = '';
 
         const options = { weekday: 'short', month: 'short', day: 'numeric' };
         header.textContent = `San Mateo Lunch Menu – ${targetDate.toLocaleDateString('en-US', options)}`;
 
-        const leftColumn = document.createElement('div');
-        leftColumn.className = 'column';
-        const rightColumn = document.createElement('div');
-        rightColumn.className = 'column';
+        const leftCol = document.createElement('div');
+        leftCol.classList.add('column');
+        const rightCol = document.createElement('div');
+        rightCol.classList.add('column');
 
-        const categoriesLeft = ['omnivore', 'vegetarian', 'vegan'];
-        const categoriesRight = ['sandwich', 'salad', 'soup'];
+        const leftKeys = ['omnivore', 'vegetarian', 'vegan'];
+        const rightKeys = ['sandwich', 'salad', 'soup'];
 
-        categoriesLeft.forEach(cat => {
-          if (todayMenu[cat]) {
+        for (const key of leftKeys) {
+          const section = menuData[key];
+          if (section) {
             const h3 = document.createElement('h3');
-            h3.className = cat;
-            h3.textContent = todayMenu[cat].title;
-            const p = document.createElement('p');
-            p.innerHTML = todayMenu[cat].items.join(', ');
-            leftColumn.appendChild(h3);
-            leftColumn.appendChild(p);
-          }
-        });
+            h3.textContent = key === 'omnivore' ? section.title : `${section.title} (${key.charAt(0).toUpperCase() + key.slice(1)})`;
+            h3.className = key;
+            leftCol.appendChild(h3);
 
-        categoriesRight.forEach(cat => {
-          if (todayMenu[cat]) {
+            const p = document.createElement('p');
+            p.textContent = section.items.join(', ');
+            leftCol.appendChild(p);
+          }
+        }
+
+        for (const key of rightKeys) {
+          const section = menuData[key];
+          if (section) {
             const h3 = document.createElement('h3');
-            h3.className = cat;
-            h3.textContent = todayMenu[cat].title;
-            const p = document.createElement('p');
-            p.innerHTML = todayMenu[cat].items.join(', ');
-            rightColumn.appendChild(h3);
-            rightColumn.appendChild(p);
-          }
-        });
+            h3.textContent = section.title;
+            h3.className = key;
+            rightCol.appendChild(h3);
 
-        menuDiv.appendChild(leftColumn);
-        menuDiv.appendChild(rightColumn);
-      })
-      .catch(() => {
+            const p = document.createElement('p');
+            p.textContent = section.items.join(', ');
+            rightCol.appendChild(p);
+          }
+        }
+
+        menuContainer.appendChild(leftCol);
+        menuContainer.appendChild(rightCol);
+      } catch (err) {
+        console.error('Menu load failed:', err);
         window.location.href = fallbackImage;
-      });
+      }
+    }
+
+    loadMenu();
   </script>
 </body>
 </html>
