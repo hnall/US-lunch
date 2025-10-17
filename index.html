@@ -18,7 +18,7 @@
     }
 
     .content {
-      margin-top: 150px; /* shift header + menu down together */
+      margin-top: 150px;
     }
 
     header {
@@ -37,13 +37,8 @@
       line-height: 1.3;
     }
 
-    .column {
-      width: 45%;
-    }
-
-    h3 {
-      margin: 18px 0 8px 0;
-    }
+    .column { width: 45%; }
+    h3 { margin: 18px 0 8px 0; }
 
     .omnivore { color: #000; font-weight: bold; }
     .vegetarian { color: green; font-weight: bold; }
@@ -62,81 +57,78 @@
 </head>
 <body>
   <div class="content">
-    <header id="header">Loading menu...</header>
-
-    <div class="menu" id="menu" style="display:none;">
-      <div class="column" id="col1"></div>
-      <div class="column" id="col2"></div>
-    </div>
+    <header id="menu-date">Loading menu...</header>
+    <div class="menu" id="menu"></div>
   </div>
 
   <footer>Menu display is based on the web PDF and is subject to change.</footer>
 
   <script>
-    const JSON_URL = "https://github.com/hnall/US-lunch/blob/main/sm_menu.json";
-    const REDIRECT_IMAGE_URL = "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1759264059/nuevaschoolorg/xsbsbt1z8yeiuvpcoemz/US_REDIRECT_IMG.jpg";
+    const menuUrl = 'https://YOUR_GITHUB_PATH/sm_menu.json'; // ← replace with your GitHub raw URL
+    const fallbackImage = 'https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1759264059/nuevaschoolorg/xsbsbt1z8yeiuvpcoemz/US_REDIRECT_IMG.jpg';
 
-    // Get today’s ISO date in Pacific time
-    function todayISO() {
-      const la = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-      return la.toISOString().split('T')[0];
-    }
+    // get local date in Pacific Time
+    const now = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+    const hour = now.getHours();
 
-    function formatDateForHeader() {
-      const la = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-      return la.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-    }
+    // show today's menu between 5am–1pm, tomorrow's after 1pm
+    const targetDate = new Date(now);
+    if (hour >= 13 && hour < 24) targetDate.setDate(targetDate.getDate() + 1);
+    const dateKey = targetDate.toISOString().split("T")[0];
 
-    async function init() {
-      const today = todayISO();
-      let data;
-      try {
-        const res = await fetch(JSON_URL, { cache: "no-store" });
-        if (!res.ok) throw new Error("Bad response");
-        data = await res.json();
-      } catch (err) {
-        console.error("JSON fetch failed:", err);
-        window.location.href = REDIRECT_IMAGE_URL;
-        return;
-      }
+    fetch(menuUrl)
+      .then(res => res.json())
+      .then(data => {
+        const todayMenu = data[dateKey];
+        if (!todayMenu) {
+          window.location.href = fallbackImage;
+          return;
+        }
 
-      const menuData = data[today];
-      if (!menuData) {
-        window.location.href = REDIRECT_IMAGE_URL;
-        return;
-      }
+        const menuDiv = document.getElementById('menu');
+        const header = document.getElementById('menu-date');
 
-      // Update header
-      document.getElementById("header").textContent = `San Mateo Lunch Menu – ${formatDateForHeader()}`;
+        const options = { weekday: 'short', month: 'short', day: 'numeric' };
+        header.textContent = `San Mateo Lunch Menu – ${targetDate.toLocaleDateString('en-US', options)}`;
 
-      const col1 = document.getElementById("col1");
-      const col2 = document.getElementById("col2");
+        const leftColumn = document.createElement('div');
+        leftColumn.className = 'column';
+        const rightColumn = document.createElement('div');
+        rightColumn.className = 'column';
 
-      col1.innerHTML = `
-        <h3 class="omnivore">${menuData.omnivore?.title || "Kitchen Table"}</h3>
-        <p>${menuData.omnivore?.menu || ""}</p>
+        const categoriesLeft = ['omnivore', 'vegetarian', 'vegan'];
+        const categoriesRight = ['sandwich', 'salad', 'soup'];
 
-        <h3 class="vegetarian">Earthly Selections (Vegetarian)</h3>
-        <p>${menuData.vegetarian?.menu || ""}</p>
+        categoriesLeft.forEach(cat => {
+          if (todayMenu[cat]) {
+            const h3 = document.createElement('h3');
+            h3.className = cat;
+            h3.textContent = todayMenu[cat].title;
+            const p = document.createElement('p');
+            p.innerHTML = todayMenu[cat].items.join(', ');
+            leftColumn.appendChild(h3);
+            leftColumn.appendChild(p);
+          }
+        });
 
-        <h3 class="vegan">Plant Inspired (Vegan)</h3>
-        <p>${menuData.vegan?.menu || ""}</p>
-      `;
+        categoriesRight.forEach(cat => {
+          if (todayMenu[cat]) {
+            const h3 = document.createElement('h3');
+            h3.className = cat;
+            h3.textContent = todayMenu[cat].title;
+            const p = document.createElement('p');
+            p.innerHTML = todayMenu[cat].items.join(', ');
+            rightColumn.appendChild(h3);
+            rightColumn.appendChild(p);
+          }
+        });
 
-      col2.innerHTML = `
-        <h3 class="sandwich">Sandwich Favorite</h3>
-        <p>${menuData.sandwich?.menu || ""}</p>
-
-        <h3 class="salad">Superfood Tossed (Salad)</h3>
-        <p>${menuData.salad?.menu || ""}</p>
-
-        ${menuData.soup?.menu ? `<h3 class="soup">Soup</h3><p>${menuData.soup.menu}</p>` : ""}
-      `;
-
-      document.getElementById("menu").style.display = "flex";
-    }
-
-    init();
+        menuDiv.appendChild(leftColumn);
+        menuDiv.appendChild(rightColumn);
+      })
+      .catch(() => {
+        window.location.href = fallbackImage;
+      });
   </script>
 </body>
 </html>
