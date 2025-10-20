@@ -59,103 +59,95 @@
   </div>
   <footer>Menu display is based on the web PDF and is subject to change.</footer>
 
-  <script>
-    const menuUrl = 'https://raw.githubusercontent.com/hnall/US-lunch/main/sm_menu.json';
-    const fallbackImage = 'https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1759264059/nuevaschoolorg/xsbsbt1z8yeiuvpcoemz/US_REDIRECT_IMG.jpg';
+<script>
+  const menuUrl = 'https://raw.githubusercontent.com/hnall/US-lunch/main/sm_menu.json';
+  const fallbackImage = 'https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1759264059/nuevaschoolorg/xsbsbt1z8yeiuvpcoemz/US_REDIRECT_IMG.jpg';
 
-    function logError(message, data = {}) {
-      const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
-      console.warn(`[${timestamp}] ❌ Menu Error: ${message}`, data);
-    }
+  async function loadMenu() {
+    try {
+      const res = await fetch(menuUrl, { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
 
-    async function loadMenu() {
-      try {
-        const res = await fetch(menuUrl, { cache: 'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
+      const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+      let targetDate = new Date(now);
 
-        // Get current PT time
-        const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-        const hour = now.getHours();
-        let targetDate = new Date(now);
-
-        // After 1pm, check if tomorrow exists before switching
-        if (hour >= 13 && hour < 24) {
-          const tomorrow = new Date(now);
-          tomorrow.setDate(now.getDate() + 1);
-          const tomorrowKey = tomorrow.toISOString().split('T')[0];
-          if (data[tomorrowKey]) {
-            targetDate = tomorrow;
-            console.info(`⏩ After 1pm — showing tomorrow's menu (${tomorrowKey})`);
-          } else {
-            console.info(`🕐 After 1pm but no menu for tomorrow — staying on today's`);
-          }
-        }
-
-        const dateKey = targetDate.toISOString().split('T')[0];
-        const menuData = data[dateKey];
-
-        if (!menuData) {
-          logError('No menu found for ' + dateKey);
-          window.location.href = fallbackImage;
-          return;
-        }
-
-        const header = document.getElementById('menuHeader');
-        const menuContainer = document.getElementById('menu');
-        menuContainer.innerHTML = '';
-
-        const options = { weekday: 'short', month: 'short', day: 'numeric' };
-        header.textContent = `San Mateo Lunch Menu – ${targetDate.toLocaleDateString('en-US', options)}`;
-
-        const leftCol = document.createElement('div');
-        leftCol.classList.add('column');
-        const rightCol = document.createElement('div');
-        rightCol.classList.add('column');
-
-        const leftKeys = ['omnivore', 'vegetarian', 'vegan'];
-        const rightKeys = ['sandwich', 'salad', 'soup'];
-
-        for (const key of leftKeys) {
-          const section = menuData[key];
-          if (section) {
-            const h3 = document.createElement('h3');
-            h3.textContent = key === 'omnivore'
-              ? section.title
-              : `${section.title} (${key.charAt(0).toUpperCase() + key.slice(1)})`;
-            h3.className = key;
-            leftCol.appendChild(h3);
-
-            const p = document.createElement('p');
-            p.textContent = section.items.join(', ');
-            leftCol.appendChild(p);
-          }
-        }
-
-        for (const key of rightKeys) {
-          const section = menuData[key];
-          if (section) {
-            const h3 = document.createElement('h3');
-            h3.textContent = section.title;
-            h3.className = key;
-            rightCol.appendChild(h3);
-
-            const p = document.createElement('p');
-            p.textContent = section.items.join(', ');
-            rightCol.appendChild(p);
-          }
-        }
-
-        menuContainer.appendChild(leftCol);
-        menuContainer.appendChild(rightCol);
-        console.info(`✅ Menu loaded for ${dateKey}`);
-      } catch (err) {
-        logError('Fetch or render failed', err);
-        window.location.href = fallbackImage;
+      // After 1 PM → show tomorrow’s menu
+      if (now.getHours() >= 13) {
+        targetDate.setDate(now.getDate() + 1);
+        console.info('⏩ After 1PM – showing tomorrow’s menu');
+      } else {
+        console.info('🕐 Before 1PM – showing today’s menu');
       }
-    }
 
-    loadMenu();
-  </script>
+      // FIX: use local date string instead of UTC ISO
+      const dateKey = targetDate.toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' });
+      console.info(`📅 Looking for date key: ${dateKey}`);
+      const menuData = data[dateKey];
+
+      if (!menuData) {
+        console.warn(`⚠️ No menu found for ${dateKey}. Redirecting to fallback image.`);
+        window.location.href = fallbackImage;
+        return;
+      }
+
+      const header = document.getElementById('menuHeader');
+      const menuContainer = document.getElementById('menu');
+      menuContainer.innerHTML = '';
+
+      const options = { weekday: 'short', month: 'short', day: 'numeric' };
+      header.textContent = `San Mateo Lunch Menu – ${targetDate.toLocaleDateString('en-US', options)}`;
+
+      const leftCol = document.createElement('div');
+      leftCol.classList.add('column');
+      const rightCol = document.createElement('div');
+      rightCol.classList.add('column');
+
+      const leftKeys = ['omnivore', 'vegetarian', 'vegan'];
+      const rightKeys = ['sandwich', 'salad', 'soup'];
+
+      for (const key of leftKeys) {
+        const section = menuData[key];
+        if (section) {
+          const h3 = document.createElement('h3');
+          h3.textContent = key === 'omnivore'
+            ? section.title
+            : `${section.title} (${key.charAt(0).toUpperCase() + key.slice(1)})`;
+          h3.className = key;
+          leftCol.appendChild(h3);
+
+          const p = document.createElement('p');
+          p.textContent = section.items.join(', ');
+          leftCol.appendChild(p);
+        }
+      }
+
+      for (const key of rightKeys) {
+        const section = menuData[key];
+        if (section) {
+          const h3 = document.createElement('h3');
+          h3.textContent = section.title;
+          h3.className = key;
+          rightCol.appendChild(h3);
+
+          const p = document.createElement('p');
+          p.textContent = section.items.join(', ');
+          rightCol.appendChild(p);
+        }
+      }
+
+      menuContainer.appendChild(leftCol);
+      menuContainer.appendChild(rightCol);
+      console.info(`✅ Menu loaded for ${dateKey}`);
+    } catch (err) {
+      console.error('❌ Fetch or render failed', err);
+      window.location.href = fallbackImage;
+    }
+  }
+
+  loadMenu();
+</script>
+
 </body>
 </html>
+
