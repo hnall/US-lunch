@@ -1,157 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>San Mateo Lunch Menu</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: url('https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1759362350/nuevaschoolorg/rloo1fjmir6wnpiozyh4/TestBG3.jpg') no-repeat center center fixed;
-      background-size: cover;
-      margin: 0;
-      width: 1920px;
-      height: 1080px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      color: #000;
-    }
+<meta charset="UTF-8" />
+<title>San Mateo Lunch Menu</title>
+<meta name="viewport" content="width=449, height=797, initial-scale=1.0">
 
-    .content {
-      margin-top: 150px;
-    }
+<style>
+  @font-face {
+    font-family: "Sailec";
+    src: url("https://raw.githubusercontent.com/hnall/sailec-font/main/Type%20Dynamic%20-%20Sailec.otf") format("opentype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Sailec";
+    src: url("https://raw.githubusercontent.com/hnall/sailec-font/main/Type%20Dynamic%20-%20Sailec%20Bold.otf") format("opentype");
+    font-weight: 700;
+  }
 
-    header {
-      text-align: center;
-      font-size: 52px;
-      font-weight: bold;
-      margin: 0 0 40px 0;
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 449px;
+    height: 797px;
+    max-width: 449px;
+    max-height: 797px;
+    margin: auto;
+    background: url("https://www.nuevaschool.org/fs/resource-manager/view/3f9f4649-35a8-47d2-8aa9-c3973d887fca") no-repeat top left;
+    background-size: 100%;
+    font-family: "Sailec", sans-serif;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
 
-    .menu {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: flex-start;
-      padding: 0 200px;
-      font-size: 30px;
-      line-height: 1.3;
-    }
+  header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 100px 10px 20px;
+  }
 
-    .column { width: 45%; }
+  .menu-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 
-    h3 { margin: 18px 0 8px 0; }
+  .menu-set {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
 
-    .omnivore { color: #000; font-weight: bold; }
-    .vegetarian { color: green; font-weight: bold; }
-    .vegan { color: purple; font-weight: bold; }
-    .sandwich { color: #0077ff; font-weight: bold; }
-    .salad { color: #008080; font-weight: bold; }
-    .soup { color: orange; font-weight: bold; }
+  .menu-set.active {
+    opacity: 1;
+    z-index: 1;
+  }
 
-    footer {
-      text-align: center;
-      font-size: 22px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-  </style>
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 18px 0 6px 0;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0 30px 8px 30px;
+  }
+
+  .omnivore { color: #000; }
+  .vegetarian { color: #228B22; }
+  .vegan { color: #7D3C98; }
+  .sandwich { color: #0077FF; }
+  .salad { color: #008080; }
+  .soup { color: #FF8C00; }
+
+  footer {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+    margin-bottom: 90px;
+  }
+
+  /* Fallback image mode */
+  .fallback-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .fallback-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .fallback-image.active {
+    opacity: 1;
+  }
+</style>
 </head>
+
 <body>
-  <div class="content" id="content">
-    <header id="menuHeader">San Mateo Lunch Menu</header>
-    <div class="menu" id="menu">
-      <div class="column" id="col1"></div>
-      <div class="column" id="col2"></div>
-    </div>
+  <header id="menuHeader">San Mateo Lunch Menu</header>
+
+  <div class="menu-wrapper" id="menuWrapper">
+    <div class="menu-set" id="set1"></div>
+    <div class="menu-set" id="set2"></div>
   </div>
 
   <footer>Menu display is based on the web PDF and is subject to change.</footer>
 
-  <script>
-    const JSON_URL = "https://hnall.github.io/US-lunch/sm_menu.json";
-    const REDIRECT_IMG = "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1759264059/nuevaschoolorg/xsbsbt1z8yeiuvpcoemz/US_REDIRECT_IMG.jpg";
+<script>
+  const JSON_URL = "https://hnall.github.io/US-lunch/sm_menu.json";
+  const FALLBACK_IMAGES = [
+    "https://resources.finalsite.net/images/f_auto,q_auto/v1761073592/nuevaschoolorg/mb7k5pdmu5hmpbog4mse/SM_sm_2.jpg",
+    "https://resources.finalsite.net/images/f_auto,q_auto/v1761073591/nuevaschoolorg/gxvpkuryynbyjmuqksb5/SM_sm_1.jpg",
+    "https://resources.finalsite.net/images/f_auto,q_auto/v1761073591/nuevaschoolorg/sor8toqvytdqoq7s8q31/SM_sm_3.jpg"
+  ];
 
-    async function getPacificTime() {
-      try {
-        const res = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles");
-        const data = await res.json();
-        return new Date(data.datetime);
-      } catch (err) {
-        console.warn("Time API failed; using device time");
-        return new Date();
-      }
+  async function getPacificTime() {
+    try {
+      const res = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles");
+      const data = await res.json();
+      return new Date(data.datetime);
+    } catch {
+      return new Date();
+    }
+  }
+
+  async function loadMenu() {
+    const now = await getPacificTime();
+    const hour = now.getHours();
+    let target = new Date(now);
+    let isTomorrow = false;
+    if (hour >= 13) {
+      target.setDate(now.getDate() + 1);
+      isTomorrow = true;
     }
 
-    async function loadMenu() {
-      const now = await getPacificTime();
-      const hour = now.getHours();
-      let target = new Date(now);
-
-      // After 1 PM, show tomorrow’s menu
-      if (hour >= 13) target.setDate(now.getDate() + 1);
-
-      const dateKey = `${target.getFullYear()}-${String(target.getMonth() + 1).padStart(2, "0")}-${String(target.getDate()).padStart(2, "0")}`;
-
-      console.log("Displaying menu for:", dateKey, " (hour:", hour, ")");
-
-      try {
-        const res = await fetch(JSON_URL + "?v=" + Date.now());
-        const data = await res.json();
-        const menu = data[dateKey];
-        if (!menu) {
-          console.log("No menu found, redirecting.");
-          window.location.href = REDIRECT_IMG;
-          return;
-        }
-
-        // Render menu
-        const header = document.getElementById("menuHeader");
-        header.textContent = `San Mateo Lunch Menu – ${target.toLocaleDateString('en-US', {weekday: 'short', month: 'short', day: 'numeric'})}`;
-
-        const col1 = document.getElementById("col1");
-        const col2 = document.getElementById("col2");
-        col1.innerHTML = "";
-        col2.innerHTML = "";
-
-        const sections1 = ["omnivore", "vegetarian", "vegan"];
-        const sections2 = ["sandwich", "salad", "soup"];
-
-        for (const key of sections1) {
-          if (menu[key]) {
-            const h3 = document.createElement("h3");
-            h3.className = key;
-            h3.textContent = menu[key].title + (key === "vegetarian" ? " (Vegetarian)" : key === "vegan" ? " (Vegan)" : "");
-            col1.appendChild(h3);
-
-            menu[key].items.forEach(item => {
-              const p = document.createElement("p");
-              p.textContent = item;
-              col1.appendChild(p);
-            });
-          }
-        }
-
-        for (const key of sections2) {
-          if (menu[key]) {
-            const h3 = document.createElement("h3");
-            h3.className = key;
-            h3.textContent = menu[key].title;
-            col2.appendChild(h3);
-
-            menu[key].items.forEach(item => {
-              const p = document.createElement("p");
-              p.textContent = item;
-              col2.appendChild(p);
-            });
-          }
-        }
-      } catch (err) {
-        console.error("Menu load failed:", err);
-        window.location.href = REDIRECT_IMG;
-      }
+    const dateKey = `${target.getFullYear()}-${String(target.getMonth()+1).padStart(2,"0")}-${String(target.getDate()).padStart(2,"0")}`;
+    let data, menu;
+    try {
+      const res = await fetch(JSON_URL + "?v=" + Date.now());
+      data = await res.json();
+      menu = data[dateKey];
+    } catch (e) {
+      menu = null;
     }
 
-    loadMenu();
-  </script>
+    if (!menu) {
+      launchFallback();
+      return;
+    }
+
+    // Normal menu rendering
+    const formattedDate = target.toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'});
+    const headerText = isTomorrow
+      ? `San Mateo Lunch Menu (Tomorrow – ${formattedDate})`
+      : `San Mateo Lunch Menu ${formattedDate}`;
+    document.getElementById("menuHeader").textContent = headerText;
+
+    const set1 = document.getElementById("set1");
+    const set2 = document.getElementById("set2");
+
+    const sections1 = ["omnivore","vegetarian","vegan"];
+    const sections2 = ["sandwich","salad","soup"];
+
+    const buildSection = (key, obj) => {
+      const h3 = document.createElement("h3");
+      h3.className = key;
+      h3.textContent = obj.title +
+        (key === "vegetarian" ? " (Vegetarian)" : key === "vegan" ? " (Vegan)" : "");
+      const div = document.createElement("div");
+      div.appendChild(h3);
+      obj.items.forEach(item => {
+        const p = document.createElement("p");
+        p.textContent = item;
+        div.appendChild(p);
+      });
+      return div;
+    };
+
+    for (const key of sections1) {
+      if (menu[key]) set1.appendChild(buildSection(key, menu[key]));
+    }
+    for (const key of sections2) {
+      if (menu[key]) set2.appendChild(buildSection(key, menu[key]));
+    }
+
+    // Start cycling between sets
+    let current = 1;
+    const switchSets = () => {
+      document.querySelectorAll(".menu-set").forEach(el => el.classList.remove("active"));
+      if (current === 1) {
+        set1.classList.add("active");
+        current = 2;
+      } else {
+        set2.classList.add("active");
+        current = 1;
+      }
+    };
+
+    set1.classList.add("active");
+    setInterval(switchSets, 10000);
+  }
+
+  function launchFallback() {
+    // Remove menu layout
+    document.body.innerHTML = "";
+    const container = document.createElement("div");
+    container.className = "fallback-container";
+    document.body.appendChild(container);
+
+    FALLBACK_IMAGES.forEach((src, i) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.className = "fallback-image";
+      if (i === 0) img.classList.add("active");
+      container.appendChild(img);
+    });
+
+    let index = 0;
+    setInterval(() => {
+      const imgs = document.querySelectorAll(".fallback-image");
+      imgs.forEach(img => img.classList.remove("active"));
+      index = (index + 1) % imgs.length;
+      imgs[index].classList.add("active");
+    }, 10000);
+  }
+
+  loadMenu();
+</script>
 </body>
 </html>
