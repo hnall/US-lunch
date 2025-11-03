@@ -1,28 +1,4 @@
 {
-  "2025-10-27": {
-    "soup": {"title": "Soup", "items": ["Tomato Basil"]},
-    "omnivore": {"title": "Meatless Monday", "items": ["Grilled Cheese on Sourdough Sliced Bread, House made Tomato Basil Soup, Del Cabo Ranch Tri Color Cauliflower"]},
-    "vegetarian": {"title": "Earthly Selections", "items": ["Grilled Cheese on Sourdough Sliced Bread, House made Tomato Basil Soup, Del Cabo Ranch Tri Color Cauliflower"]},
-    "vegan": {"title": "Plant Inspired", "items": ["Hummus, Lettuce and Tomato Sandwich on Sourdough, House made Tomato Basil Soup, Del Cabo Ranch Tri Color Cauliflower"]},
-    "sandwich": {"title": "Sandwich Favorite", "items": ["Bagels and Cream Cheese"]},
-    "salad": {"title": "Superfood Tossed", "items": ["Chickpea Salad - Fall Greens, marinated Chickpeas, Red Onions, Black Olives, Feta Cheese Crumbles, Tomatoes and Cucumbers tossed in Balsamic Vinaigrette"]}
-  },
-  "2025-10-28": {
-    "soup": {"title": "Soup", "items": ["Miso"]},
-    "omnivore": {"title": "Asian Inspired", "items": ["Orange Chicken, Steamed Jasmine Rice and Happy Boy Farm Medley of Stir Fried Veggies"]},
-    "vegetarian": {"title": "Earthly Selections", "items": ["Orange Tofu, Steamed Jasmine Rice and Happy Boy Farm Medley of Stir Fried Veggies"]},
-    "vegan": {"title": "Plant Inspired", "items": ["Orange Tofu, Steamed Jasmine Rice and Happy Boy Farm Medley of Stir Fried Veggies"]},
-    "sandwich": {"title": "It's a Wrap", "items": ["Chicken Caesar Salad Wrap - Flour tortillas, Romaine Lettuce, Shaved Parmesan and Crispy Croutons"]},
-    "salad": {"title": "Superfood Tossed", "items": ["Heirloom Caprese Salad - Buffalo Mozzarella Cheese, Fresh Basil, Heirloom Tomatoes tossed in Olive Oil"]}
-  },
-  "2025-10-29": {
-    "soup": {"title": "Soup", "items": ["Chicken Tortilla"]},
-    "omnivore": {"title": "Platillos Latino", "items": ["Beef and Cheese Quesadilla, Shredded Lettuce, Pico De Gallo and Sour Cream, Side Ranchero Beans"]},
-    "vegetarian": {"title": "Earthly Selections", "items": ["Cheese Quesadilla, Shredded Lettuce, Pico De Gallo and Sour Cream, Side Ranchero Beans"]},
-    "vegan": {"title": "Plant Inspired", "items": ["Medley of Veggie Quesadilla, Shredded Lettuce, Pico De Gallo, Side Ranchero Beans"]},
-    "sandwich": {"title": "Sandwich Favorite", "items": ["Wild Caught Tuna Salad with Green Onions, Cilantro and Jalapenos mixed with Mayonnaise on Hoagie Roll"]},
-    "salad": {"title": "Superfood Tossed", "items": ["Pesto Pasta Salad with Heirloom Tomatoes"]}
-  },
   "2025-11-03": {
     "soup": "Classic Chili",
     "omnivore": {
@@ -461,4 +437,3 @@
     }
   }
 }
-
