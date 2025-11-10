@@ -130,15 +130,39 @@
     "https://resources.finalsite.net/images/f_auto,q_auto/v1761073591/nuevaschoolorg/sor8toqvytdqoq7s8q31/SM_sm_3.jpg"
   ];
 
-  async function getPacificTime() {
-    try {
-      const res = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles");
+async function getPacificTime() {
+  // Try WorldTimeAPI first
+  try {
+    const res = await fetch("https://worldtimeapi.org/api/timezone/America/Los_Angeles", { cache: "no-store" });
+    if (res.ok) {
       const data = await res.json();
-      return new Date(data.datetime);
-    } catch {
-      return new Date();
+      if (data.datetime) return new Date(data.datetime);
     }
+  } catch (err) {
+    console.warn("WorldTimeAPI failed:", err);
   }
+
+  // Fallback: TimeAPI.io
+  try {
+    const res = await fetch("https://timeapi.io/api/TimeZone/zone?timeZone=America/Los_Angeles", { cache: "no-store" });
+    if (res.ok) {
+      const data = await res.json();
+      if (data.dateTime) return new Date(data.dateTime);
+    }
+  } catch (err) {
+    console.warn("TimeAPI.io failed:", err);
+  }
+
+  // Final fallback: local system time converted to Pacific
+  console.warn("All time sources failed — using local system time.");
+  const now = new Date();
+  try {
+    return new Date(now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+  } catch {
+    return now;
+  }
+}
+
 
   async function loadMenu() {
     const now = await getPacificTime();
