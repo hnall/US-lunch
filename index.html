@@ -131,17 +131,10 @@
   ];
 
 async function getPacificTime() {
-  try {
-    const now = new Date();
-    // Convert from UTC to Pacific (PST/PDT)
-    const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-    const offset = -8; // UTC-8, adjust to -7 if DST desired manually
-    return new Date(utc + 3600000 * offset);
-  } catch {
-    return new Date();
-  }
+  return new Date(
+    new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })
+  );
 }
-
 
   async function loadMenu() {
     const now = await getPacificTime();
