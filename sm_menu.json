@@ -1,130 +1,274 @@
 {
-"2026-06-01": {
-"omnivore": {
-"title": "Global Adventure",
-"items": [
-"Roasted Grass Fed Beef, Mushroom Demi Glace Sauce, Potato Dauphaunise and Medley of Organic Veggies"
-]
-},
-"vegetarian": {
-"title": "Earthly Selections",
-"items": [
-"Quinoa, Summer Veggies and Rice Stuffed Bellpeppers, Potato Dauphaunise and Medley of Organic Veggies"
-]
-},
-"vegan": {
-"title": "Plant Inspired",
-"items": [
-"Quinoa, Summer Veggies and Rice Stuffed Bellpeppers, Potato Dauphaunise and Medley of Organic Veggies"
-]
-},
-"sandwich": {
-"title": "Sandwich Favorite",
-"items": [
-"Wild Caught Tuna Salad"
-]
-},
-"salad": {
-"title": "Superfood Tossed",
-"items": [
-"Asian Salmon Salad- Romaine Lettuce, Mandarin Oranges, Bean Sprouts, Celery, Red Peppers and Crunchy Rice Noodles tossed in Soy Dressing"
-]
-}
-},
-"2026-06-02": {
-"omnivore": {
-"title": "Kitchen Table",
-"items": [
-"A Russian Classic- Chicken Breast Kiev- Smoked Paprika and fresh herbs with compound butter bread Crumbs, Wild Rice Pilaf and Medley of Summer Veggies"
-]
-},
-"vegetarian": {
-"title": "Earthly Selections",
-"items": [
-"Meatless Chicken Kiev, Wild Rice Pilaf and Medley of Summer Veggies"
-]
-},
-"vegan": {
-"title": "Plant Inspired",
-"items": [
-"Meatless Chicken Kiev, Wild Rice Pilaf and Medley of Summer Veggies"
-]
-},
-"sandwich": {
-"title": "Sandwich Favorite",
-"items": [
-"Bagels and Cream Cheese"
-]
-},
-"salad": {
-"title": "Superfood Tossed",
-"items": [
-"Organic Caprese Pasta Salad- Vine Ripened Tomatoes, Pearls of Mozzarella, Organic Spring Lettuce, Bow Tie Pasta, Fresh Basil, Cucumbers tossed in Olive Oil and Red Wine Vinaigrette"
-]
-}
-},
-"2026-06-03": {
-"omnivore": {
-"title": "Asian Inspired",
-"items": [
-"Pork glazed with Sweet Chili and Gojuchange Sauce, Ratto Ranch Broccoli and Steamed Jasmine Fried Rice"
-]
-},
-"vegetarian": {
-"title": "Earthly Selections",
-"items": [
-"Wo Chong Tofu glazed with Sweet Chili and Gojuchange Sauce, Ratto Ranch Broccoli and Steamed Jasmine Fried Rice"
-]
-},
-"vegan": {
-"title": "Plant Inspired",
-"items": [
-"Wo Chong Tofu glazed with Sweet Chili and Gojuchange Sauce, Ratto Ranch Broccoli and Steamed Jasmine Fried Rice"
-]
-},
-"sandwich": {
-"title": "Sandwich Favorite",
-"items": [
-"Samosas"
-]
-},
-"salad": {
-"title": "Superfood Tossed",
-"items": [
-"Vegetarian Taco Salad- Organic Tomatoes, Fresh Organic Corn, Beans, Black Olives, Organic Cheddar Cheese, Green Onions and side Ranch"
-]
-}
-},
-"2026-06-04": {
-"omnivore": {
-"title": "Global Bowls",
-"items": [
-"Free Range Tuscan Chicken, Creamy Sundried Tomato Sauce, Bloomsdale Spinach, Penne Pasta and Summer Del Cabo Farm Asparagus"
-]
-},
-"vegetarian": {
-"title": "Earthly Selections",
-"items": [
-"Chickpea Patties, Creamy Sundried Tomato Sauce, Bloomsdale Spinach, Penne Pasta and Summer Del Cabo Farm Asparagus"
-]
-},
-"vegan": {
-"title": "Plant Inspired",
-"items": [
-"Chickpea Patties, Vegan Sundried Tomato Sauce, Bloomsdale Spinach, Penne Pasta and Summer Del Cabo Farm Asparagus"
-]
-},
-"sandwich": {
-"title": "Sandwich Favorite",
-"items": [
-"North Beach Sub-Genoa Salami, Bassian Black Forrest Ham, Organic Shredded Lettuce, Pepperoncini, Organic Tomatoes and Provolone Cheese on Artisan Hoagie Roll"
-]
-},
-"salad": {
-"title": "Superfood Tossed",
-"items": [
-"Beni Imo Salad- Okinawan purple potato salad (Blue Zone areas) Arugula, Red Onions, Fresh Garlic, Udon Noodles tossed in a Soy and Sesame Vinaigrette"
-]
-}
-}
+  "2026-08-19": {
+    "omnivore": {
+      "title": "Platillos Latino",
+      "items": [
+        "Argentinian Flank Steak Marinated with Chimichurri Sauce, Side Roasted Rosemary Potatoes, Ratto Ranch Califlower"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Marinated Tofu with Chimichurri Sauce, Side Roasted Rosemary Potatoes, Ratto Ranch Cauliflower"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Marinated Tofu with Chimichurri Sauce, Side Roasted Rosemary Potatoes, Ratto Ranch Cauliflower"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Cage Free Egg Salad Sandwich on White Sliced Bread"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  },
+  "2026-08-20": {
+    "omnivore": {
+      "title": "Asian Inspired",
+      "items": [
+        "Free Range Chicken Pad See Ew with Chinese Broccoli, Carrots and Red Bellpeppers, Fresh Basil, Sauteed in Thai Sauces"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Wo Chong Tofu Pad See Ew with Chinese Broccoli, Carrots and Red Bellpeppers, Fresh Basil, Sauteed in Thai Sauces"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Wo Chong Tofu Pad See Ew with Chinese Broccoli, Carrots and Red Bellpeppers, Fresh Basil, Sauteed in Thai Sauces"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Grilled Cheese Sandwich with Heirloom Tomatoes on Sliced Sourdough"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  },
+  "2026-08-21": {
+    "omnivore": {
+      "title": "Welcome Back from Summer BBQ",
+      "items": [
+        "BBQ'd Tri Tip, Warm Potato Salad with Vinaigrette, Sauteed Green Beans"
+      ]
+    },
+    "vegetarian": {
+      "title": "Welcome Back from Summer BBQ",
+      "items": [
+        "Veg/Vegan BBQ'd Jack Fruit, Warm Potato Salad with Vinaigrette, Sauteed Green Beans"
+      ]
+    },
+    "vegan": {
+      "title": "Welcome Back from Summer BBQ",
+      "items": [
+        "Veg/Vegan BBQ'd Jack Fruit, Warm Potato Salad with Vinaigrette, Sauteed Green Beans"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Wild Caught Tuna Salad with Mayonnaise, Onions and Celery on French Roll"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  },
+  "2026-08-24": {
+    "omnivore": {
+      "title": "Global Adventure",
+      "items": [
+        "Free Range Chicken Alfredo, Penne Pasta, Cheesey Bechamel Sauce and Farm Fresh Broccoli"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Sweet Peas and Carrot Alfredo, Penne Pasta, Cheesey Bechamel Sauce and Farm Fresh Broccoli"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Lentil Marinara Sauce, Penne Pasta and Farm Fresh Broccoli"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Golden Gate Roast Beef Sandwich-Cheddar Cheese, Lettuce and Tomato on A French Roll"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  },
+  "2026-08-25": {
+    "omnivore": {
+      "title": "Platillos Latino",
+      "items": [
+        "Grass Fed Beef Ropa Viejo, Spanish Rice and Black Bean Frijoles"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Jack Fruit Ropa Viejo, Spanish Rice and Black Bean Frijoles"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Jack Fruit Ropa Viejo, Spanish Rice and Black Bean Frijoles"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Banana, WOW Butter and Strawberry Jelly on Grilled Sliced White Bread"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  },
+  "2026-08-26": {
+    "omnivore": {
+      "title": "Asian Inspired",
+      "items": [
+        "Bassian Farm Pork Bulgolgi, Veggie Fried Rice and Roasted Cauliflower"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Jack Fruit Bulgolgi, Veggie Fried Rice and Roasted Cauliflower"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Jack Fruit Bulgolgi, Veggie Fried Rice and Roasted Cauliflower"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Mini Turkey Sliders on Mini Buns, with Tomato, Lettuce and Tomato"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  },
+  "2026-08-27": {
+    "omnivore": {
+      "title": "Soup and Sandwich Day",
+      "items": [
+        "Turkey Sandwich with Lettuce and Tomato on French Roll, House Made Tomato Soup"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Falafel Sandwich with Lettuce, Tomato and Hummus on French Roll, House Made Tomato Soup"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Falafel Sandwich with Lettuce, Tomato and Hummus on French Roll, House Made Tomato Soup"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Cream Cheese, Fresh Dill, Tomatoes and Cucumbers on Bagels"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  },
+  "2026-08-28": {
+    "omnivore": {
+      "title": "Breakfast for Lunch",
+      "items": [
+        "Applewood Smoked Bacon, Cage Free Scrambled Eggs and Country Potatoes"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Meatless Sausage, Cage Free Scrambled Eggs and Country Potatoes"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Meatless Sausage, Just Egg Scrambled and Country Potatoes"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Ultimate Vegetarian, 9 Grain Bread, Hummus, Lettuce, Arugula, Provolone Cheese, Spinach, Cucumber and Tomato"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  },
+  "2026-08-31": {
+    "omnivore": {
+      "title": "Kitchen Table",
+      "items": [
+        "Free Range Chicken Soup",
+        "Applewood Smoked Bacon Mac and Cheese, House Roasted Tri Colored Cauliflower"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Vegetarian Butternut Squash Mac and Cheese, House Roasted Tri Colored Cauliflower"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Vegetarian Butternut Squash Mac and Cheese, House Roasted Tri Colored Cauliflower"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Grass Fed Meatball Sandwich, House Made Marinara and Mozzarella Cheese on Steak Roll",
+        "Turkey, with Grilled Peaches and Mozzarella Cheese Sandwich on a French Baguette"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": []
+    }
+  }
 }
