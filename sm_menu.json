@@ -1,274 +1,497 @@
 {
-  "2026-08-19": {
-    "omnivore": {
-      "title": "Platillos Latino",
-      "items": [
-        "Argentinian Flank Steak Marinated with Chimichurri Sauce, Side Roasted Rosemary Potatoes, Ratto Ranch Califlower"
-      ]
-    },
-    "vegetarian": {
-      "title": "Earthly Selections",
-      "items": [
-        "Marinated Tofu with Chimichurri Sauce, Side Roasted Rosemary Potatoes, Ratto Ranch Cauliflower"
-      ]
-    },
-    "vegan": {
-      "title": "Plant Inspired",
-      "items": [
-        "Marinated Tofu with Chimichurri Sauce, Side Roasted Rosemary Potatoes, Ratto Ranch Cauliflower"
-      ]
-    },
-    "sandwich": {
-      "title": "Sandwich Favorite",
-      "items": [
-        "Cage Free Egg Salad Sandwich on White Sliced Bread"
-      ]
-    },
-    "salad": {
-      "title": "Superfood Tossed",
-      "items": []
-    }
-  },
-  "2026-08-20": {
-    "omnivore": {
-      "title": "Asian Inspired",
-      "items": [
-        "Free Range Chicken Pad See Ew with Chinese Broccoli, Carrots and Red Bellpeppers, Fresh Basil, Sauteed in Thai Sauces"
-      ]
-    },
-    "vegetarian": {
-      "title": "Earthly Selections",
-      "items": [
-        "Wo Chong Tofu Pad See Ew with Chinese Broccoli, Carrots and Red Bellpeppers, Fresh Basil, Sauteed in Thai Sauces"
-      ]
-    },
-    "vegan": {
-      "title": "Plant Inspired",
-      "items": [
-        "Wo Chong Tofu Pad See Ew with Chinese Broccoli, Carrots and Red Bellpeppers, Fresh Basil, Sauteed in Thai Sauces"
-      ]
-    },
-    "sandwich": {
-      "title": "Sandwich Favorite",
-      "items": [
-        "Grilled Cheese Sandwich with Heirloom Tomatoes on Sliced Sourdough"
-      ]
-    },
-    "salad": {
-      "title": "Superfood Tossed",
-      "items": []
-    }
-  },
-  "2026-08-21": {
-    "omnivore": {
-      "title": "Welcome Back from Summer BBQ",
-      "items": [
-        "BBQ'd Tri Tip, Warm Potato Salad with Vinaigrette, Sauteed Green Beans"
-      ]
-    },
-    "vegetarian": {
-      "title": "Welcome Back from Summer BBQ",
-      "items": [
-        "Veg/Vegan BBQ'd Jack Fruit, Warm Potato Salad with Vinaigrette, Sauteed Green Beans"
-      ]
-    },
-    "vegan": {
-      "title": "Welcome Back from Summer BBQ",
-      "items": [
-        "Veg/Vegan BBQ'd Jack Fruit, Warm Potato Salad with Vinaigrette, Sauteed Green Beans"
-      ]
-    },
-    "sandwich": {
-      "title": "Sandwich Favorite",
-      "items": [
-        "Wild Caught Tuna Salad with Mayonnaise, Onions and Celery on French Roll"
-      ]
-    },
-    "salad": {
-      "title": "Superfood Tossed",
-      "items": []
-    }
-  },
-  "2026-08-24": {
+  "2026-10-02": {
     "omnivore": {
       "title": "Global Adventure",
       "items": [
-        "Free Range Chicken Alfredo, Penne Pasta, Cheesey Bechamel Sauce and Farm Fresh Broccoli"
+        "Clam Chowder",
+        "Greek inspired Chicken Souvlaki, marinated in Lemon, Garlic and Oregano, Side Rice with Parsley, Dill, Oregano and Garlic side Tomato, Cucumber and Red Onion Salad tossed in vinaigrette"
       ]
     },
     "vegetarian": {
       "title": "Earthly Selections",
       "items": [
-        "Sweet Peas and Carrot Alfredo, Penne Pasta, Cheesey Bechamel Sauce and Farm Fresh Broccoli"
+        "Greek inspired Falafes, with a side Yogurt Tzatziki, Side Rice with Parsley, Dill, Oregano and Garlic side Tomato, Cucumber and Red Onion Salad tossed in vinaigrette"
       ]
     },
     "vegan": {
       "title": "Plant Inspired",
       "items": [
-        "Lentil Marinara Sauce, Penne Pasta and Farm Fresh Broccoli"
+        "Greek inspired Falafes, with a side non Dairy Tzatziki, Side Rice with Parsley, Dill, Oregano and Garlic side Tomato, Cucumber and Red Onion Salad tossed in vinaigrette"
       ]
     },
     "sandwich": {
       "title": "Sandwich Favorite",
       "items": [
-        "Golden Gate Roast Beef Sandwich-Cheddar Cheese, Lettuce and Tomato on A French Roll"
+        "Vegetarian Caprese Sandwich-Vine Ripened Tomatoes, Organic Mozzarella Pearls, Fresh Basil on a French Baguette"
       ]
     },
     "salad": {
       "title": "Superfood Tossed",
-      "items": []
+      "items": [
+        "Southwestern Veggie Salad-Organic Romaine, Black Beans, Cucumbers, Red Bell peppers Tossed in a Cilantro Lime Vinaigrette"
+      ]
     }
   },
-  "2026-08-25": {
+  "2026-10-05": {
     "omnivore": {
-      "title": "Platillos Latino",
+      "title": "Meatless Monday",
       "items": [
-        "Grass Fed Beef Ropa Viejo, Spanish Rice and Black Bean Frijoles"
+        "Tomato Basil",
+        "Cheese Raviolis, House Made Marinara Sauce, Sauteed Kale, Chard and Collard Greens, Side Garlic Toast"
       ]
     },
     "vegetarian": {
       "title": "Earthly Selections",
       "items": [
-        "Jack Fruit Ropa Viejo, Spanish Rice and Black Bean Frijoles"
+        "Cheese Raviolis, House Made Marinara Sauce, Sauteed Kale, Chard and Collard Greens, Side Garlic Toast"
       ]
     },
     "vegan": {
       "title": "Plant Inspired",
       "items": [
-        "Jack Fruit Ropa Viejo, Spanish Rice and Black Bean Frijoles"
+        "Lentil Marinara Sauce, Penne Pasta, Sauteed Kale, Chard and Collard Greens, Side Garlic Toast"
       ]
     },
     "sandwich": {
       "title": "Sandwich Favorite",
       "items": [
-        "Banana, WOW Butter and Strawberry Jelly on Grilled Sliced White Bread"
+        "California Bagelwich-Cream Cheese, Avocado, Grilled Dwelley Farm Roasted Pepper"
       ]
     },
     "salad": {
       "title": "Superfood Tossed",
-      "items": []
+      "items": [
+        "Rainbow Beet Salad-Red and Golden Beets, Bloomsdale Spinach, Feta Cheese, Shredded Carrots and Organic Quinoa Tossed in a Meyer Lemon Vinaigrette"
+      ]
     }
   },
-  "2026-08-26": {
+  "2026-10-06": {
     "omnivore": {
-      "title": "Asian Inspired",
+      "title": "American BBQ Series",
       "items": [
-        "Bassian Farm Pork Bulgolgi, Veggie Fried Rice and Roasted Cauliflower"
+        "Beef Chili",
+        "Joes BBQ Chicken and House BBQ sauce, Jojo Potatoes and side Brussel Sprouts"
       ]
     },
     "vegetarian": {
       "title": "Earthly Selections",
       "items": [
-        "Jack Fruit Bulgolgi, Veggie Fried Rice and Roasted Cauliflower"
+        "BBQ Wo Chong Tofu, Jojo Potatoes and side Brussel Sprouts"
       ]
     },
     "vegan": {
       "title": "Plant Inspired",
       "items": [
-        "Jack Fruit Bulgolgi, Veggie Fried Rice and Roasted Cauliflower"
+        "BBQ Wo Chong Tofu, Jojo Potatoes and side Brussel Sprouts"
       ]
     },
     "sandwich": {
       "title": "Sandwich Favorite",
       "items": [
-        "Mini Turkey Sliders on Mini Buns, with Tomato, Lettuce and Tomato"
+        "Veggie Samosas"
       ]
     },
     "salad": {
       "title": "Superfood Tossed",
-      "items": []
+      "items": [
+        "The Beefy Wedge-Fall Greens, Roasted Grass Fed Beef, Cherry Tomatoes, Blue Cheese Crumbles, Cage Free Eggs and Red Onions Tossed with Ranch Dressing"
+      ]
     }
   },
-  "2026-08-27": {
+  "2026-10-07": {
     "omnivore": {
-      "title": "Soup and Sandwich Day",
+      "title": "Asian Street Food",
       "items": [
-        "Turkey Sandwich with Lettuce and Tomato on French Roll, House Made Tomato Soup"
+        "Chicken Noodle",
+        "Classic Sweet and Sour Pork with Bell peppers, Onions and Pineapple, Steamed Jasmine Rice and Steamed Broccoli"
       ]
     },
     "vegetarian": {
       "title": "Earthly Selections",
       "items": [
-        "Falafel Sandwich with Lettuce, Tomato and Hummus on French Roll, House Made Tomato Soup"
+        "Sweet and Sour Jack Fruit with Organic Bell peppers, Onions and Pineapple, Steamed Organic Jasmine Rice and Steamed Broccoli"
       ]
     },
     "vegan": {
       "title": "Plant Inspired",
       "items": [
-        "Falafel Sandwich with Lettuce, Tomato and Hummus on French Roll, House Made Tomato Soup"
+        "Sweet and Sour Jack Fruit with Organic Bell peppers, Onions and Pineapple, Steamed Organic Jasmine Rice and Steamed Broccoli"
       ]
     },
     "sandwich": {
       "title": "Sandwich Favorite",
       "items": [
-        "Cream Cheese, Fresh Dill, Tomatoes and Cucumbers on Bagels"
+        "Free Range Diestal Turkey with Cranberry Jam, Green Leaf Lettuce on French Bread"
       ]
     },
     "salad": {
       "title": "Superfood Tossed",
-      "items": []
+      "items": [
+        "Vegetarian Pasta Salad-Fall Greens and Arugula Mix, Heirloom Tomatoes, Fresh Mozzarella tossed in a Pesto Sauce"
+      ]
     }
   },
-  "2026-08-28": {
-    "omnivore": {
-      "title": "Breakfast for Lunch",
-      "items": [
-        "Applewood Smoked Bacon, Cage Free Scrambled Eggs and Country Potatoes"
-      ]
-    },
-    "vegetarian": {
-      "title": "Earthly Selections",
-      "items": [
-        "Meatless Sausage, Cage Free Scrambled Eggs and Country Potatoes"
-      ]
-    },
-    "vegan": {
-      "title": "Plant Inspired",
-      "items": [
-        "Meatless Sausage, Just Egg Scrambled and Country Potatoes"
-      ]
-    },
-    "sandwich": {
-      "title": "Sandwich Favorite",
-      "items": [
-        "Ultimate Vegetarian, 9 Grain Bread, Hummus, Lettuce, Arugula, Provolone Cheese, Spinach, Cucumber and Tomato"
-      ]
-    },
-    "salad": {
-      "title": "Superfood Tossed",
-      "items": []
-    }
-  },
-  "2026-08-31": {
+  "2026-10-08": {
     "omnivore": {
       "title": "Kitchen Table",
       "items": [
-        "Free Range Chicken Soup",
-        "Applewood Smoked Bacon Mac and Cheese, House Roasted Tri Colored Cauliflower"
+        "Pumpkin",
+        "Beef Bourguignon, Mashed Potatoes and Fall Root Veggies and Tri Colored Organic Carrots"
       ]
     },
     "vegetarian": {
       "title": "Earthly Selections",
       "items": [
-        "Vegetarian Butternut Squash Mac and Cheese, House Roasted Tri Colored Cauliflower"
+        "Portobello Mushroom and Slow Bean Bourguignon, Mashed Potato and Fall Root Veggies and Tri Colored Organic Carrots"
       ]
     },
     "vegan": {
       "title": "Plant Inspired",
       "items": [
-        "Vegetarian Butternut Squash Mac and Cheese, House Roasted Tri Colored Cauliflower"
+        "Portobello Mushroom and Slow Bean Bourguignon, Mashed Potato and Fall Root Veggies and Tri Colored Organic Carrots"
       ]
     },
     "sandwich": {
       "title": "Sandwich Favorite",
       "items": [
-        "Grass Fed Meatball Sandwich, House Made Marinara and Mozzarella Cheese on Steak Roll",
-        "Turkey, with Grilled Peaches and Mozzarella Cheese Sandwich on a French Baguette"
+        "Heirloom Caprese Sandwich-Organic Buffalo Mozzarella Cheese, Fresh Basil Pesto on Ciabatta Bread"
       ]
     },
     "salad": {
       "title": "Superfood Tossed",
-      "items": []
+      "items": [
+        "Thai Salad-Organic Mix Asian Cabbage and Romaine Lettuce, Red Bell Peppers, Green Onions, Rice Noodles, Asian Pears and Bean Sprouts tossed with a Soy Ginger Dressing"
+      ]
+    }
+  },
+  "2026-10-14": {
+    "omnivore": {
+      "title": "Kitchen Table",
+      "items": [
+        "Pork Posole",
+        "Cincinnati Style Beef Chili-House Corn Bread, House Chili, Side Garden Salad"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Cincinnati Style Vegetarian Chili-House Corn Bread, House Chili, Side Garden Salad"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Cincinnati Style Vegetarian Chili-Spaghetti Pasta, House Chili, Side Garden Salad"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "House Made Falafel with Organic Lettuce, Tomatoes and Tzatziki Sauce in a Pita Bread"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "The Wedge-Marinated Beef, Bleu Cheese Crumbles, Red Onions, Tomatoes, Cage Free Eggs with Ranch Dressing"
+      ]
+    }
+  },
+  "2026-10-15": {
+    "omnivore": {
+      "title": "Platillos Latino",
+      "items": [
+        "Lasagna Soup",
+        "Slow Braised Chicken Tinga, Flour Tortillas and side Mofongo, sides shredded Lettuce, Tomatoes, Onions and Cotija Cheese"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Soyrizo, Chickpeas and Butternut Squash, Flour Tortillas and side Mofongo, sides shredded Lettuce, Tomatoes, Onions and Cotija Cheese"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Soyrizo, Chickpeas and Butternut Squash, Flour Tortillas and side Mofongo, sides shredded Lettuce, Tomatoes, Onions"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Grass Fed Meatball Sandwich, Mozzarella Cheese and Marinara Sauce on a LeBoulanger French Roll"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Classic Caesar Salad-Organic Romaine Lettuce, Shaved Parmesan Cheese, House Made Croutons tossed in a Caesar Dressing"
+      ]
+    }
+  },
+  "2026-10-16": {
+    "omnivore": {
+      "title": "Asian Inspired",
+      "items": [
+        "Broccoli Cheddar",
+        "Char Siu Marinated BBQ Pork, Veggie Fried Rice and Ratto Ranch Farm Broccoli"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Marinated Wo Chong Tofu, Veggie Fried Rice and Ratto Ranch Farm Broccoli"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Marinated Wo Chong Tofu, Veggie Fried Rice and Ratto Ranch Farm Broccoli"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Italian Hoagie-Bassian Ham, Salami and Provolone Cheese Layered with Pepperoncini's on Panorama Hoagie Bread"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Vegetarian Niçoise Salad-Organic Mesclun Mix Greens, Organic Haricot Beans, Fingerling Potatoes, Cage Free Eggs, Artichoke Hearts and Nicoise Olives, Side Apple Cider Thyme Vinaigrette"
+      ]
+    }
+  },
+  "2026-10-19": {
+    "omnivore": {
+      "title": "Meatless Monday",
+      "items": [
+        "Split Pea",
+        "Grilled Cheese on Sourdough Sliced Bread, House made Tomato Basil Soup, Del Cabo Ranch Tri Color Cauliflower"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Grilled Cheese on Sourdough Sliced Bread, House made Tomato Basil Soup, Del Cabo Ranch Tri Color Cauliflower"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Hummus, Lettuce and Tomato Sandwich on Sourdough, House made Tomato Basil Soup, Del Cabo Ranch Tri Color Cauliflower"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Vegetarian Samosas with Curried Potatoes"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Veggie Taco Salad-Mixed Greens, Red Beans, Cheddar Cheese, Red Onions"
+      ]
+    }
+  },
+  "2026-10-20": {
+    "omnivore": {
+      "title": "Kitchen Comforts",
+      "items": [
+        "Butternut Squash",
+        "Free Range Chicken Piccata, Israeli Couscous with Fresh Basil, Roasted Tomatoes, Feta Cheese and Roasted Romanesco"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Meatless Chicken Piccata, Israeli Couscous with Fresh Basil, Roasted Tomatoes, Feta Cheese and Roasted Romanesco"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Meatless Chickken Tofu Piccata, Israeli Couscous with Fresh Basil, Roasted Tomatoes and Roasted Romanesco"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Eggplant Parmesan Sandwich-Panko Breaded Eggplant, House Made Marinara Sauce, Melted Mozzarella Cheese on Toasted Steak Roll"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Free Range Chicken Caesar-Organic Romaine Lettuce, House Made Croutons, Shaved Parmesan Cheese Side Caesar Dressing"
+      ]
+    }
+  },
+  "2026-10-21": {
+    "omnivore": {
+      "title": "Platillos Latino",
+      "items": [
+        "Chicken Noodle",
+        "Grass Fed Beef Fajitas with Onions and Bellpeppers, Flour Tortillas, Spanish Rice"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Wo Chong Tofu Fajitas with Onions and Bellpeppers, Flour Tortillas, Spanish Rice"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Wo Chong Tofu Fajitas with Onions and Bellpeppers, Flour Tortillas, Spanish Rice"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "The Mortadella, Creamy Burrata Cheese, Pesto spread, Arugula, Pepperoncinis on Toasted Sourdough Baguette"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Greek Salad-Organic Romaine, Kalamata Olives, Tomatoes, Cucumbers and Feta Cheese Tossed in a Lemon Vinaigrette"
+      ]
+    }
+  },
+  "2026-10-22": {
+    "omnivore": {
+      "title": "Market Grill",
+      "items": [
+        "Beef Barley",
+        "Tuscan Free Range Chicken and House Marinara with Rigatoni, Garlic Toast and Roasted Brussel Sprouts"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Portobella Stuffed Mushroom with Medley of Veggies, Red Quinoa and Feta Cheese, Side Rigatoni with Marinara and Roasted Brussel Sprouts"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Portobella Stuffed Mushroom with Medley of Veggies, Red Quinoa and Feta Cheese, Side Rigatoni with Marinara and Roasted Brussel Sprouts"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Turkey and Cheddar with Lettuce, Tomato on Sliced Sourdough"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Turkey Waldorf-Apples, Raisins, Organic Celery, Cranberries tossed in a Waldorf Dressing"
+      ]
+    }
+  },
+  "2026-10-23": {
+    "omnivore": {
+      "title": "American BBQ Series….",
+      "items": [
+        "Baked Potato with Cheddar",
+        "Ground Beef Sloppy Osborns, Inspired by Steve and his Secret recipe, Burger Buns, Jojo potatoes and Farm picked Broccoli"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Meatless Beef Sloppy Osborns, Inspired by Steve and his Secret recipe, Burger Buns, Jojo potatoes and Farm picked Broccoli"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Meatless Beef Sloppy Osborns, Inspired by Steve and his Secret recipe, Burger Buns, Jojo potatoes and Farm picked Broccoli"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Heirloom Caprese Sandwich-Organic Buffalo Mozzarella Cheese, Fresh Basil Pesto on Ciabatta Bread"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Vegetarian Pasta Salad-Fall Greens and Arugula Mix, Heirloom Tomatoes, Fresh Mozzarella tossed in a Pesto Sauce"
+      ]
+    }
+  },
+  "2026-10-26": {
+    "omnivore": {
+      "title": "Global Adventure",
+      "items": [
+        "Tomato Basil",
+        "Grass Fed Marinated Flank Steak with a Mushroom Demi Glace, Creamy Mashed Potatoes, Farm Fresh Brussel Sprouts"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Eggplant Stacks with Mozzarella and Fresh Basil, Creamy Mashed Potatoes, Farm Fresh Brussel Sprouts"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Eggplant Stacks with Mozzarella and Fresh Basil, Creamy Mashed Potatoes, Farm Fresh Brussel Sprouts"
+      ]
+    },
+    "sandwich": {
+      "title": "Sandwich Favorite",
+      "items": [
+        "Bagels and Cream Cheese"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Chickpea Salad-Fall Greens, marinated Chickpeas, Red Onions, Black Olives, Feta Cheese Crumbles, Tomatoes and Cucumbers tossed in Balsamic Vinaigrette"
+      ]
+    }
+  },
+  "2026-10-27": {
+    "omnivore": {
+      "title": "Asian Inspired",
+      "items": [
+        "Miso",
+        "Orange Chicken, Steamed Jasmine Rice and Happy Boy Farm Medley of Stir Fried Veggies"
+      ]
+    },
+    "vegetarian": {
+      "title": "Earthly Selections",
+      "items": [
+        "Orange Tofu, Steamed Jasmine Rice and Happy Boy Farm Medley of Stir Fried Veggies"
+      ]
+    },
+    "vegan": {
+      "title": "Plant Inspired",
+      "items": [
+        "Orange Tofu, Steamed Jasmine Rice and Happy Boy Farm Medley of Stir Fried Veggies"
+      ]
+    },
+    "sandwich": {
+      "title": "It's a Wrap",
+      "items": [
+        "Chicken Caesar Salad Wrap-Flour tortillas, Romaine Lettuce, Shaved Parmesan and Crispy Croutons"
+      ]
+    },
+    "salad": {
+      "title": "Superfood Tossed",
+      "items": [
+        "Heirloom Caprese Salad-Buffalo Mozzarella Cheese, Fresh Basil, Heirloom Tomatoes tossed in Olive Oil"
+      ]
     }
   }
 }
